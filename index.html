@@ -1,29 +1,38 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Ulang Tahun</title>
-    <link rel="stylesheet" href="game-style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Daily Rating App</title>
 </head>
 <body>
-    <div class="game-container">
-        <h1>Temukan Hadiahmu!</h1>
-        <div class="game-board">
-            <div class="puzzle">
-                <div class="piece" data-id="1">1</div>
-                <div class="piece" data-id="2">2</div>
-                <div class="piece" data-id="3">3</div>
-                <div class="piece" data-id="4">4</div>
-            </div>
-            <p class="hint">Coba tekan angka secara berurutan!</p>
-            <div class="message hidden">
-                <p>Selamat! Kamu berhasil menemukan hadiahnya!</p>
-                <a href="page_ucapan.html" class="hidden-button">Buka Ucapan</a>
-            </div>
-        </div>
-    </div>
-    <script src="game.js"></script>
+    <h1>Daily Rating App</h1>
+    
+    <section>
+        <h2>Rate Your Day</h2>
+        <form id="ratingForm">
+            <input type="number" id="rating" min="1" max="5" placeholder="Rate (1-5)" required>
+            <button type="submit">Submit Rating</button>
+        </form>
+        <h3>Your Previous Ratings</h3>
+        <ul id="ratingList"></ul>
+    </section>
+
+    <section>
+        <h2>Set a Timer</h2>
+        <input type="number" id="timerInput" placeholder="Minutes" required>
+        <button id="setTimer">Set Timer</button>
+    </section>
+
+    <section>
+        <h2>Share Your Story</h2>
+        <textarea id="storyInput" placeholder="Write your story here..."></textarea>
+        <button id="submitStory">Submit Story</button>
+        <h3>Your Stories</h3>
+        <ul id="storyList"></ul>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
