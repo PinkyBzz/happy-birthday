@@ -21,7 +21,7 @@ header.style.animation = 'float 2s ease-in-out infinite';
 // Enhanced rotation effect for photo frame
 const photoFrame = document.querySelector('.photo-frame');
 photoFrame.addEventListener('mouseenter', () => {
-    photoFrame.style.animation = 'bounce 0.5s ease, rotate 1s linear infinite';
+    photoFrame.style.animation = 'bounce 0.5s ease';
 });
 
 photoFrame.addEventListener('mouseleave', () => {
